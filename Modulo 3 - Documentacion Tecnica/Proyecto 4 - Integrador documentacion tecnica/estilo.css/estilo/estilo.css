@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: bisque;
+    margin: 0;
+}
+
+#navbar{
+    background-color: aqua;
+    
+}
+
+
+#main-doc{
+    background-color: brown;
+}
+
+
+
+
+
+@media (min-width: 768px){
+    #navbar{
+        width: 20%;
+        min-height: 100vh;
+    }
+
+    #main-doc{
+        width: 100%;
+    }
+}
+

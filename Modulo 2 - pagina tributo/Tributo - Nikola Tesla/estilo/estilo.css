@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background-color: #0b1020; /* fondo oscuro simple */
+    color: #e6f1ff;           /* texto claro */
+    font-family: sans-serif;  /* tipografía básica */
+    line-height: 1.6;
+}
+
+header{
+    text-align: center;
+    padding: 32px 16px 16px;
+}
+
+#title{
+    font-size: 2.4rem;  /* tamaño fijo simple */
+    font-weight: 800;
+    color: #e6f1ff;
+    text-shadow: 0 0 12px rgba(0,229,255,0.35);
+}
+
+header p{
+    margin-top: 12px;
+    color: #9aa7bf;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 24px rgba(0,229,255,0.35);
+}
+
+img{
+  display: block;
+}
+
+#image:hover{
+  box-shadow: 0 0 36px rgba(0,229,255,0.6);
+}
+
+#img-div{
+  max-width: 980px;
+  margin: 20px auto 0;
+  padding: 16px;
+  background-color: #0f152e;
+  border: 1px solid #00e5ff;
+  border-radius: 14px;
+}
+
+#img-caption{
+  text-align: center;
+  margin-top: 12px;
+  color: #9aa7bf;
+  font-size: 0.95rem;
+}
+
+#main{
+  max-width: 980px;
+  margin: 24px auto 48px;
+  padding: 0 16px;
+}
+
+#tribute-info h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: #e6f1ff;
+  text-shadow: 0 0 10px rgba(0,229,255,0.28);
+}
+
+#tribute-info p{ color: #e6f1ff; }
+
+#tribute-info h3{ margin-top: 24px; font-weight: 600; }
+
+#tribute-info ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 0;
+}
+
+#tribute-info li{
+  margin: 8px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+#tribute-info li::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00e5ff;
+  box-shadow: 0 0 8px rgba(0,229,255,0.7);
+  position: absolute;
+  left: 0;
+  top: 0.9em;
+  transform: translateY(-50%);
+}
+
+#tribute-link{
+  color: #00e5ff;
+  text-decoration: none;
+  border-bottom: 1px dashed #00e5ff;
+}
+
+#tribute-link:hover,
+#tribute-link:focus{
+  color: #00ffa3;
+  border-bottom-color: #00ffa3;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Integrador</title>
+  <link rel="stylesheet" href="estilo/estilo.css">
+</head>
+
+<body>
+  <div class="titulo">
+    <h1 id="title">Proyecto Formulario de registro</h1>
+    <p id="description">Charlas Fenix, resurgiendo con tu mejor version!</p>
+
+  </div>
+
+  <form id="survey-form" class="bordes-redondos" method="post" action='https://register-demo.freecodecamp.org'>
+    <!--    DATOS USUARIO-->
+    <fieldset>
+      <legend>Datos</legend>
+
+      <label id="name-label" for="name"> Nombre:
+        <input id="name" class="inline" name="name" type="text" placeholder="Nombre" required>
+      </label>
+
+      <label id="email-label" for="mail"> Email:
+        <input id="email" class="inline" name="mail" type="email" placeholder="Email" required>
+      </label>
+
+      <label for="new-password"> Crea una contraseña:
+        <input id="new-password" class="inline" name="new-password" type="password" pattern="[a-z0-5]{8,}" required>
+      </label>
+
+      <label id="number-label" for="edad"> Edad: (opcional)
+        <input id="number" class="inline" name="edad" type="number" min="8" max="50" placeholder="Edad">
+      </label>
+
+      <!--    sexo    -->
+      <legend>Sexo:</legend>
+
+      <label for="sexo">
+        <input type="radio" name="sexo" value="no dice" checked>
+        Prefiero no decir
+      </label>
+
+      <label for="sexo">
+        <input type="radio" name="sexo" value="no binario">
+        No binario
+      </label>
+
+      <label for="sexo">
+        <input type="radio" name="sexo" value="masculino"> Masculino
+      </label>
+
+      <label for="sexo">
+        <input type="radio" name="sexo" value="femenino"> Femenino
+      </label>
+
+      <label class="inline" for="profile-picture">Subir foto de perfil: 
+        <input id="profile-picture" type="file"
+          name="file" />
+      </label>
+
+    </fieldset>
+    <!--=============================================================-->
+    <!--===================== OTRO FIELDSET========================================-->
+    <!--=============================================================-->
+    <fieldset>
+      <legend>¿Como nos conociste?</legend>
+      <select name="referencia" id="dropdown">
+        <option value="">Elegi una</option>
+        <option value="1">Redes sociales</option>
+        <option value="2">Publicidad</option>
+        <option value="3">Conocidos</option>
+        <option value="4">Otra</option>
+      </select>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>¿Qué tecnologías estás aprendiendo?</legend>
+      <label><input type="checkbox" name="tecnologia" value="html"> HTML</label>
+      <label><input type="checkbox" name="tecnologia" value="css"> CSS</label>
+      <label><input type="checkbox" name="tecnologia" value="javascript"> JavaScript</label>
+      <label><input type="checkbox" name="tecnologia" value="python"> Python</label>
+      <label><input type="checkbox" name="tecnologia" value="otra"> Otra</label>
+
+      <label class="inline" for="comentarios">Comentarios adicionales:
+        <textarea id="comentarios" class="inline" name="comentarios" rows="4"
+          placeholder="Contanos un poco sobre que otras tecnologías conoces."></textarea>
+      </label>
+
+
+    </fieldset>
+
+
+    <button id="submit" class="inline boton bordes-redondos" type="submit">Enviar</button>
+
+  </form>
+</body>
+
+</html>
