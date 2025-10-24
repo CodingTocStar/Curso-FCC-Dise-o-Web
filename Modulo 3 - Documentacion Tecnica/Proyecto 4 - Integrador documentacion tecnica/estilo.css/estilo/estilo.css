@@ -7,34 +7,48 @@ html {
 }
 
 body{
-    display: flex;
-    min-height: 100vh;
-    background-color: bisque;
-    margin: 0;
+      margin: 0;
+  min-height: 100vh;
+  background-color: bisque;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row; /* importante para el layout horizontal */
 }
 
 #navbar{
-    background-color: aqua;
-    
+  position: fixed;          /* Fijo en escritorio */
+  top: 0;
+  left: 0;
+  width: 250px;             /* ancho fijo */
+  height: 100vh;            /* altura total */
+  background-color: aqua;
+  padding: 1rem;
+  overflow-y: auto;         /* si hay mucho contenido, hace scroll */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
 
 #main-doc{
-    background-color: brown;
+    background-color: #fff;
+  margin-left: 250px
 }
 
 
 
 
 
-@media (min-width: 768px){
+@media (max-width: 768px){
     #navbar{
-        width: 20%;
-        min-height: 100vh;
+        position: relative;  /* deja de ser fijo */
+    width: 100%;
+    height: auto;
     }
 
     #main-doc{
-        width: 100%;
+        margin-left: 0;
     }
 }
 
+pre{
+    background-color: #D3D3D3;
+}
