@@ -1,0 +1,129 @@
+/* ===== TIPOGRAFÍA MODERNA ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f3f4f6;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+/* ===== NAVBAR FIJO (mobile + desktop) ===== */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* mobile */
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+  border-bottom: 4px solid #0f172a;
+}
+
+#navbar header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nav-link {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: white;
+  border-left: 3px solid #38bdf8;
+}
+
+/* ===== MAIN CONTENT ===== */
+#main-doc {
+  margin-top: 200px;   /* espacio para navbar en mobile */
+  padding: 30px 20px;
+}
+
+/* ===== SECCIONES ===== */
+.main-section {
+  margin-bottom: 80px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.main-section header h1,
+.main-section header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* ===== CÓDIGO ===== */
+pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+code {
+  background: #e5e7eb;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+pre code{
+    background: #0f172a;
+}
+
+
+/* ===== LISTAS ===== */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* ===== DESKTOP (SIDEBAR) ===== */
+@media (min-width: 900px) {
+
+  body {
+    display: flex;
+  }
+
+  #navbar {
+    width: 270px;
+    height: 100vh;
+    padding: 30px 20px;
+    border-bottom: none;
+    border-right: 4px solid #0f172a;
+  }
+
+  #navbar header {
+    text-align: left;
+  }
+
+  #main-doc {
+    margin-top: 0;
+    margin-left: 270px;
+    padding: 40px;
+  }
+}

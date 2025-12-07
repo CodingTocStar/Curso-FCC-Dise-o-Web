@@ -1,67 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css/estilo/estilo.css">
-    <title>Proyecto 4 - Integrador Documentacion tecnica</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentación Técnica – CSS Intermedio</title>
+  <link rel="stylesheet" href="estilo/estilo.css">
 </head>
+
 <body>
-    <nav id="navbar">
-        <header>
-            CSS intermedio
-        </header>
-        <ul>
-            <li><a href="#tablas">Tablas</a></li>
-            <li><a href="#selectores_de_atributo">Selectores de atributo</a></li>
-            <li><a href="#pseudo_selectores">Pseudo selectores</a></li>
-            <li><a href="#posicionamiento">Posicionamiento</a></li>
-            <li><a href="#transformaciones">Transformaciones</a></li>
-            <li><a href="#media_queries">Media queries</a></li>
-        </ul>
-    </nav>
 
-    <main id="main-doc">
-       <section id="tablas" class="main-section">
-            <header>Tablas</header>
-            <p>Las tablas tienen varias secciones y componentes como son:</p>
-            <ul>
-                <li>
-                    <span><code>&lttable&gt; &lt/table&gt</code></span>
-                    <span>Crea la tabla general.</span>
-                </li>
-                <li>
-                    <span><code>&ltcaption&gt; &lt/caption&gt</code></span>
-                    <span>El titulo de la tabla</span>
-                </li>
-                <li>
-                    <span><code>&ltthead&gt; &lt/thead&gt</code></span>
-                    <span></span>
-                </li>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <header>CSS Intermedio</header>
 
-            </ul>
-        </section>
-        
-        <section id="selectores_de_atributo" class="main-section">
-            <header>Selectores de atributo</header>
-        </section>
-        
-        <section id="pseudo_selectores" class="main-section">
-            <header>Pseudo selectores</header>
-        </section>
-        
-        <section id="posicionamiento" class="main-section">
-            <header>Posicionamiento</header>
-        </section>
-        
-        <section id="transformaciones" class="main-section">
-            <header>Transformaciones</header>
-        </section>
-        
-        <section id="media_queries" class="main-section">
-            <header>Media queries</header>
-        </section>
-    </main>
-    
+    <a class="nav-link" href="#Tablas">Tablas</a>
+    <a class="nav-link" href="#Selectores_de_atributo">Selectores de atributo</a>
+    <a class="nav-link" href="#Pseudoelementos">Pseudoelementos</a>
+    <a class="nav-link" href="#Posicionamiento">Posicionamiento</a>
+    <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-doc">
+
+    <!-- TABLAS -->
+    <section class="main-section" id="Tablas">
+      <header><h1>Tablas</h1></header>
+
+      <p>Las tablas son estructuras utilizadas para organizar información en filas y columnas. Durante el proyecto <strong>Balance Sheet</strong> aprendí a utilizar todos los elementos semánticos involucrados.</p>
+
+      <p>Una tabla completa está formada por partes bien diferenciadas.</p>
+
+      <p>Aprender la semántica permite separar la estructura del estilo y facilita el acceso para tecnologías asistivas.</p>
+
+      <p>Dentro de <code>thead</code> van los encabezados, mientras que <code>tbody</code> contiene el contenido de la tabla.</p>
+
+      <p>Ejemplo de estructura básica:</p>
+
+<pre><code>&lt;table&gt;
+  &lt;caption&gt;Título&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Columna&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Dato&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+      <p>Con esta estructura es posible crear documentos contables, registros e incluso dashboards.</p>
+
+      <ul>
+        <li><code>table</code> define la tabla.</li>
+        <li><code>caption</code> asigna un título descriptivo.</li>
+        <li><code>thead</code> contiene los encabezados.</li>
+        <li><code>tbody</code> contiene los datos.</li>
+        <li><code>tr</code>, <code>th</code> y <code>td</code> definen el contenido.</li>
+      </ul>
+    </section>
+
+    <!-- SELECTORES DE ATRIBUTO -->
+    <section class="main-section" id="Selectores_de_atributo">
+      <header><h1>Selectores de atributo</h1></header>
+
+      <p>Los selectores de atributo permiten aplicar estilos basados en valores presentes en atributos HTML.</p>
+      <p>En el proyecto del Balance Sheet utilicé el selector <code>[class~="sr-only"]</code> para mejorar accesibilidad.</p>
+      <p>Este selector identifica cualquier elemento cuyo atributo <code>class</code> contenga la palabra exacta.</p>
+      <p>Es una técnica esencial para interactuar con contenido invisible pero accesible.</p>
+
+<pre><code>span[class~="sr-only"] {
+  clip-path: inset(50%);
+  width: 1px;
+}</code></pre>
+
+      <p>Los selectores de atributo son muy útiles para estilos condicionales sin añadir clases adicionales.</p>
+
+      <ul>
+        <li><code>[attr]</code> selecciona elementos con ese atributo.</li>
+        <li><code>[attr="valor"]</code> selecciona coincidencia exacta.</li>
+        <li><code>[class~="valor"]</code> coincide con una palabra dentro de class.</li>
+        <li>Son ideales para accesibilidad.</li>
+        <li>Permiten un CSS más expresivo.</li>
+      </ul>
+    </section>
+
+    <!-- PSEUDOELEMENTOS -->
+    <section class="main-section" id="Pseudoelementos">
+      <header><h1>Pseudoelementos</h1></header>
+
+      <p>Los pseudoelementos permiten generar contenido visual sin modificar el HTML real.</p>
+      <p>Durante el proyecto <strong>Responsive Piano</strong> los utilicé para crear las teclas negras sin añadir nodos extra.</p>
+      <p>Esto mantiene el código HTML limpio y mejora la mantenibilidad.</p>
+
+<pre><code>.key.black--key::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+}</code></pre>
+
+      <p>Se colocan respecto al contenedor cuando este tiene <code>position: relative</code>.</p>
+
+      <ul>
+        <li><code>::before</code> inserta contenido al inicio.</li>
+        <li><code>::after</code> inserta contenido al final.</li>
+        <li>Son ideales para detalles decorativos.</li>
+        <li>Reducen la necesidad de HTML adicional.</li>
+        <li>Separan estilo de estructura.</li>
+      </ul>
+    </section>
+
+    <!-- POSICIONAMIENTO -->
+    <section class="main-section" id="Posicionamiento">
+      <header><h1>Posicionamiento</h1></header>
+
+      <p>El posicionamiento es clave para crear interfaces visualmente complejas.</p>
+      <p>En el piano, utilicé <code>position: relative</code> para definir un sistema de referencia para teclas negras generadas con pseudoelementos.</p>
+      <p>Y utilicé <code>position: absolute</code> para colocar elementos sobre otros.</p>
+
+<pre><code>.key {
+  position: relative;
+}
+
+.key.black--key::after {
+  position: absolute;
+  top: 0;
+}</code></pre>
+
+      <p>También apliqué <code>float</code> en las teclas blancas para lograr una distribución horizontal simple.</p>
+
+      <ul>
+        <li><code>relative</code> crea un nuevo contexto de posicionamiento.</li>
+        <li><code>absolute</code> saca el elemento del flujo.</li>
+        <li><code>sticky</code> combina fixed + relative.</li>
+        <li><code>fixed</code> mantiene algo siempre visible.</li>
+        <li>Son fundamentales para layouts avanzados.</li>
+      </ul>
+    </section>
+
+    <!-- RESPONSIVE DESIGN -->
+    <section class="main-section" id="Responsive_Design">
+      <header><h1>Responsive Design</h1></header>
+
+      <p>Gracias a las media queries pude adaptar el diseño del piano a diferentes tamaños de pantalla.</p>
+      <p>Las media queries activan reglas solo cuando las condiciones se cumplen.</p>
+
+<pre><code>@media (max-width: 768px) {
+  #piano { width: 358px; }
+}</code></pre>
+
+      <p>Esto permite crear interfaces flexibles y accesibles.</p>
+
+      <ul>
+        <li><code>max-width</code> se activa en pantallas pequeñas.</li>
+        <li><code>min-width</code> organiza reglas para pantallas grandes.</li>
+        <li>Permiten rediseñar layouts.</li>
+        <li>Evitan desbordes.</li>
+        <li>Son esenciales para cualquier web moderna.</li>
+      </ul>
+    </section>
+
+  </main>
+
 </body>
 </html>
