@@ -4,26 +4,48 @@
     margin: 0;
 }
 
+:root{
+    --color-general: #f8f1e4;  
+}
+
+body{
+    background-color: var(--color-general);
+}
+
 header {
   width: 100%;
-  background-color: #f2e1c2;
+  background-color: var(--color-general);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+
 #header-img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+
 }
 
 header h1 {
   font-size: 1.5rem;
   margin-left: 1rem;
   color: #4b2a00;
+
   white-space: nowrap;
+
+  user-select: none;
 }
 
 header {
@@ -36,21 +58,65 @@ header {
   right: 0;
   display: flex;
   gap: 2rem;
-  background-color: #f2e1c2;
+  background-color: var(--color-general);
   padding: 1rem 2rem;
   z-index: 1000;
+  border-radius: 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: #4b2a00;   /* color temporal para verlos bien */
-    background-color: aqua;
+    color: #4b2a00;   
+    /*background-color: aqua;*/
     font-weight: bold;
 }
 
 
-main {
-    padding-top: 80px;
+
+
+/*      FORM        */
+
+/* .form{
+    background-color: #4b2a00;
+    
+} */
+
+#form{
+    /*background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form input:not([type="submit"]){
+    width: 50%;
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8b5a2b;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #8b5a2b;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+
+}
+
+input[type="submit"]:hover {
+  background-color: #6d441f;
 }
 
 
@@ -85,7 +151,7 @@ main {
 
 #productos {
   padding: 4rem 2rem;
-  background-color: #fff7ec;
+  background-color: var(--color-general);
   text-align: center;
 }
 
