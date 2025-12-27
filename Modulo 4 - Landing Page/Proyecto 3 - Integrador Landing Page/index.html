@@ -1,38 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidromiel Fenix</title>
-    <link rel="stylesheet" href="estilo/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidromiel Fenix</title>
+  <link rel="stylesheet" href="estilo/estilo.css">
 </head>
+
 <body>
-    <header id="header">
-        <img id="header-img" src="" alt="" >
+  <header id="header">
+    <img id="header-img" src="imagenes/fenix.webp" alt="">
+    <h1>HIDROMIEL FENIX</h1>
 
-        <nav id="nav-bar">
-            <a href="#caracteristicas" class="nav-link">Caracteristicas</a>
-            <a href="#historia" class="nav-link">Historia</a>
-            <a href="#productos" class="nav-link">Productos</a>
-        </nav>
-    </header>¨
+    <nav id="nav-bar">
+      <a href="#caracteristicas" class="nav-link">Caracteristicas</a>
+      <a href="#historia" class="nav-link">Historia</a>
+      <a href="#productos" class="nav-link">Productos</a>
+    </nav>
+  </header>¨
 
-    <main>
-        <!--    CARACTERISTICAS     -->
-        <section id="caracteristicas">
+  <main>
+    <section>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <legend>Hecho a mano, obras de arte.</legend>
+        <input type="email" name="email" id="email" placeholder="Ingrese su mail" required>
 
-        </section>
-        
-        <!--    HISTORIA    -->
-        <section id="historia">
+        <input id="submit" type="submit" value="Enviar">
+      </form>
 
-        </section>
+    </section>
+    <!--    CARACTERISTICAS     -->
+    <section id="caracteristicas">
+      <!--  MATERIAS PRIMAS   -->
+      <div class="caracteristicas-distinguidas">
+        <div class="icono">
+          <i></i>
+        </div>
+        <div class="descripcion">
+          <h2>MATERIAS PRIMAS PREMIUM</h2>
+          <p>Nuestras hidromieles tienen las mejores mieles, hechas con abejas cuidadas de excelente calidad.</p>
+        </div>
 
-        <!--    PRODUCTOS   -->
-        <section id="productos">
+        <!--    REPARTO   -->
+        <div class="caracteristicas-distinguidas">
+          <div class="icono">
+            <i></i>
+          </div>
+          <div class="descripcion">
+            <h2>ENTREGA EN TIEMPO</h2>
+            <p>Ni bien se realiza su pedido se le envia a la direccion deseada. Envios a todo el pais.</p>
+          </div>
 
-        </section>
-    </main>
+          <!--    CALIDAD GARANTIZADA   -->
+          <div class="caracteristicas-distinguidas">
+            <div class="icono">
+              <i></i>
+            </div>
+            <div class="descripcion">
+              <h2>CALIDAD GARANTIZADA</h2>
+              <p>La entrega le llegara intacta. Cualquier inconveniente sera en nuestro cargo.</p>
+            </div>
+
+          </div>
+
+          <!--    VIDEO   -->
+
+          <iframe id="video" src="https://youtu.be/rX1A-NGKppE?si=FfP8DZB63VdZbR1j" frameborder="0"></iframe>
+    </section>
+
+    <!--    HISTORIA    -->
+    <section id="historia">
+      <h2>Nuestra Historia</h2>
+
+      <div class="historia-container">
+        <div class="historia-card">
+          <h3>Orígenes</h3>
+          <p>
+            La hidromiel es una de las bebidas más antiguas del mundo, nacida de la
+            fermentación natural de miel y agua.
+          </p>
+        </div>
+
+        <div class="historia-card">
+          <h3>Era Vikinga</h3>
+          <p>
+            Guerreros y dioses la celebraban como bebida sagrada, símbolo de fuerza,
+            honor y celebración.
+          </p>
+        </div>
+
+        <div class="historia-card">
+          <h3>Fénix</h3>
+          <p>
+            Recuperamos la tradición y la traemos al presente con un proceso artesanal
+            y pasión moderna.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!--    PRODUCTOS   -->
+    <section id="productos">
+      <h2>Nuestros Productos</h2>
+
+      <div class="productos-container">
+        <div class="producto-card">
+          <h3>Fénix Clásica</h3>
+          <p>
+            Hidromiel tradicional, equilibrada y dorada. El sabor puro de la miel fermentada.
+          </p>
+          <p class="precio">$4.500</p>
+          <button>Comprar</button>
+        </div>
+
+        <div class="producto-card">
+          <h3>Frutos del Yggdrasil</h3>
+          <p>
+            Melomel de frutos rojos. Dulce, fresco y vibrante, inspirado en los nueve mundos.
+          </p>
+          <p class="precio">$5.200</p>
+          <button>Comprar</button>
+        </div>
+
+        <div class="producto-card">
+          <h3>Brasa Ancestral</h3>
+          <p>
+            Hidromiel especiada con canela, clavo y jengibre. Calidez ritual en cada trago.
+          </p>
+          <p class="precio">$5.800</p>
+          <button>Comprar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer id="footer">
+    <div class="footer-content">
+      <p>© 2025 Hidromiel Fénix</p>
+
+      <div class="footer-links">
+        <a href="#caracteristicas">Características</a>
+        <a href="#historia">Historia</a>
+        <a href="#productos">Productos</a>
+      </div>
+    </div>
+  </footer>
+
 
 </body>
+
 </html>
