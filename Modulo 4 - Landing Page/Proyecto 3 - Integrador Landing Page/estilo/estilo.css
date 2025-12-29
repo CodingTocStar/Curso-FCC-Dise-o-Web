@@ -54,6 +54,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 
@@ -90,6 +91,8 @@ header {
   padding: 1rem 2rem;
   z-index: 1000;
   border-radius: 10px;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 nav a {
@@ -111,10 +114,23 @@ nav a:hover {
   color: var(--color-secundario);
 }
 
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-primario);
+}
+
+.icon-close {
+  display: none;
+}
+
+
+
 /* =============================================
     MAIN
 ============================================= */
-main{
+main {
   margin-top: 11rem;
 }
 
@@ -359,7 +375,7 @@ footer {
     gap: 1rem;
   }
 
-  main{
+  main {
     margin-top: 2rem;
   }
 
@@ -372,16 +388,68 @@ footer {
     font-size: 1.2rem;
   }
 
-  #nav-bar {
+  /* #nav-bar {
     width: 100%;
     justify-content: center;
     padding: 0.5rem 0;
     border-radius: 0;
     flex-direction: column;
     gap: 0.5rem;
+  } */
+
+
+    #nav-bar {
+    top: 100%;
+    right: 1rem;
+
+    flex-direction: column;
+    background-color: var(--color-general);
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 1rem;
+
+    display: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+        opacity: 0;
+    transform: translateY(-10px);
+
   }
 
-    #form {
+    #menu-toggle:checked ~ #nav-bar {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+
+  #menu-toggle:checked ~ .menu-icon .icon-open {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu-icon .icon-close {
+  display: inline;
+}
+
+.icon-close {
+  display: none;
+}
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-icon .icon-open {
+  display: inline;
+}
+
+.menu-icon .icon-close {
+  display: none;
+}
+
+
+  #form {
     width: 90%;
   }
 
