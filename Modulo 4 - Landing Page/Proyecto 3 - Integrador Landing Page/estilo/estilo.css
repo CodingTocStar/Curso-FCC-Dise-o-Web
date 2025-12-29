@@ -1,23 +1,33 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 
 :root {
   --color-general: #f8f1e4;
 
-  --color-primario: #4b2a00;     /* marrón miel */
-  --color-secundario: #8b5a2b;   /* ámbar */
-  --color-texto: #3a2a1a;        /* texto principal */
-  --color-texto-suave: #6b5a4a;  /* texto secundario */
+  --color-primario: #4b2a00;
+  /* marrón miel */
+  --color-secundario: #8b5a2b;
+  /* ámbar */
+  --color-texto: #3a2a1a;
+  /* texto principal */
+  --color-texto-suave: #6b5a4a;
+  /* texto secundario */
   --color-claro: #ffffff;
 }
 
 
-body{
-    background-color: var(--color-general);
-     color: var(--color-texto);
+body {
+  background-color: var(--color-general);
+  color: var(--color-texto);
 }
 
 header {
@@ -29,9 +39,9 @@ header {
   padding: 1rem 2rem;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 
@@ -71,8 +81,12 @@ header {
 }
 
 nav a {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
+
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 header h1,
@@ -81,6 +95,7 @@ nav a {
 }
 
 nav a:hover {
+  background-color: rgba(139, 90, 43, 0.15);
   color: var(--color-secundario);
 }
 
@@ -94,25 +109,25 @@ nav a:hover {
     
 } */
 
-#form{
-    /*background-color: aqua;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
+#form {
+  /*background-color: aqua;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
 }
 
-#form input:not([type="submit"]){
-    width: 50%;
+#form input:not([type="submit"]) {
+  width: 50%;
 }
 
 legend {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #8b5a2b;
+  color: var(--color-primario);
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -126,37 +141,38 @@ input[type="submit"] {
   margin-top: 0.5rem;
   width: fit-content;
   padding: 0.75rem 1.5rem;
-
+  
 }
 
 input[type="submit"]:hover {
   background-color: #6d441f;
+  border-radius: 10px;
 }
 
 /*      CARACTERISTICAS     */
 
-#caracteristicas{
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-texto);
+#caracteristicas {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-texto);
 }
 
-.caracteristicas-distinguidas{
-    width: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: stretch;
-    margin-bottom: 2rem;
+.caracteristicas-distinguidas {
+  width: 50%;
+  /* background-color: green; */
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 2rem;
 }
 
 .icono {
   display: flex;
-  align-items: center;     
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   min-width: 80px;
-  margin-right: 2rem;         
+  margin-right: 2rem;
 }
 
 .icono i {
@@ -165,7 +181,8 @@ input[type="submit"]:hover {
 }
 
 .descripcion {
-  flex: 1; /* ocupa todo el espacio restante */
+  flex: 1;
+  /* ocupa todo el espacio restante */
 }
 
 .descripcion h2 {
@@ -182,7 +199,7 @@ input[type="submit"]:hover {
   margin: 4rem auto;
   padding: 1rem;
   background-color: rgba(75, 42, 0, 0.05);
-   border-radius: 16px;
+  border-radius: 16px;
 }
 
 .video-container iframe {
@@ -255,6 +272,10 @@ input[type="submit"]:hover {
   gap: 1rem;
 }
 
+.producto-card p {
+  color: var(--color-texto-suave);
+}
+
 .producto-card button {
   padding: 0.8rem;
   border: none;
@@ -272,15 +293,21 @@ input[type="submit"]:hover {
 .precio {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #4b2a00;
+  color: var(--color-secundario);
 }
 
+/* ==========================================
+    FOOTER
+========================================== */
 
 footer {
-  background-color: #4b2a00;
-  color: #fff7ec;
+  background-color: var(--color-primario);
+  color: var(--color-general);
   padding: 2rem;
   text-align: center;
+  width: 100%;
+  /* width: 100vw;
+  margin-left: calc(50% - 50vw); */
 }
 
 .footer-content {
@@ -296,7 +323,7 @@ footer {
 }
 
 .footer-links a {
-  color: #fff7ec;
+  color: var(--color-general);
   text-decoration: none;
   font-weight: bold;
 }
@@ -307,7 +334,7 @@ footer {
 
 
 @media (max-width: 768px) {
-    header {
+  header {
     flex-direction: column;
     gap: 1rem;
   }
@@ -316,9 +343,13 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
-    
 
-    .historia-container, .productos-container {
+  .video-container{
+    width: 80vw;
+  }
+
+  .historia-container,
+  .productos-container {
     flex-direction: column;
     align-items: center;
   }
