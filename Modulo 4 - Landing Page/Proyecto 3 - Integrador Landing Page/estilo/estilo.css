@@ -114,6 +114,10 @@ nav a:hover {
   color: var(--color-secundario);
 }
 
+#menu-toggle {
+  display: none;
+}
+
 .menu-icon {
   display: none;
   font-size: 1.8rem;
@@ -397,56 +401,38 @@ footer {
     gap: 0.5rem;
   } */
 
-
-    #nav-bar {
-    top: 100%;
-    right: 1rem;
-
-    flex-direction: column;
-    background-color: var(--color-general);
-    padding: 1rem;
-    border-radius: 12px;
-    gap: 1rem;
-
-    display: none;
-
-    transition: opacity 0.3s ease, transform 0.3s ease;
-
-        opacity: 0;
-    transform: translateY(-10px);
-
-  }
-
-    #menu-toggle:checked ~ #nav-bar {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-
-  }
-
-  #menu-toggle:checked ~ .menu-icon .icon-open {
-  display: none;
-}
-
-#menu-toggle:checked ~ .menu-icon .icon-close {
-  display: inline;
-}
-
-.icon-close {
-  display: none;
-}
-
+  /*    MENU HAMBURGUESA    */
   .menu-icon {
     display: block;
   }
 
-  .menu-icon .icon-open {
-  display: inline;
+
+
+#nav-bar {
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-general);
+  padding: 1rem;
+  border-radius: 12px;
 }
 
-.menu-icon .icon-close {
-  display: none;
-}
+
+  #menu-toggle:checked ~ #nav-bar {
+    display: flex;
+  }
+ 
+  /* cambiar iconos */
+  #menu-toggle:checked + .menu-icon .icon-open {
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon .icon-close {
+    display: inline;
+  }
+
+  /*    FIN HAMBURGUESA   */
+
+
 
 
   #form {
