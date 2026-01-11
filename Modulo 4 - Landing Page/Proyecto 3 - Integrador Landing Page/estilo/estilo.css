@@ -288,6 +288,7 @@ input[type="submit"]:hover {
 #productos h2,
 .producto-card h3 {
   color: var(--color-primario);
+  text-wrap-mode: nowrap;
 }
 
 .productos-container {
@@ -310,6 +311,8 @@ input[type="submit"]:hover {
 
 .producto-card p {
   color: var(--color-texto-suave);
+  flex: 1;
+  min-height: 4rem;
 }
 
 .producto-card button {
@@ -372,12 +375,23 @@ footer {
 ============================================
     MEDIA
 ============================================ */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   header {
-    position: relative;
-    flex-direction: column;
-    gap: 1rem;
+    position: fixed;
+    bottom: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color-general);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+
+  body {
+    margin-top: 7rem;
+  }
+
 
   main {
     margin-top: 2rem;
@@ -404,24 +418,39 @@ footer {
   /*    MENU HAMBURGUESA    */
   .menu-icon {
     display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
   }
 
 
 
-#nav-bar {
-  display: none;
-  flex-direction: column;
-  background-color: var(--color-general);
-  padding: 1rem;
-  border-radius: 12px;
-}
-
-
-  #menu-toggle:checked ~ #nav-bar {
+  #nav-bar {
+    width: 100%;
     display: flex;
+    
+    align-items: flex-start;
+    gap: 1rem;
+
+    background-color: var(--color-general);
+    padding: 0 1rem;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.35s ease;
+
   }
- 
-  /* cambiar iconos */
+
+  /* cuando se abre */
+  #menu-toggle:checked~#nav-bar {
+    max-height: 300px;
+  }
+
+  /* iconos */
+  .icon-close {
+    display: none;
+  }
+
   #menu-toggle:checked + .menu-icon .icon-open {
     display: none;
   }
