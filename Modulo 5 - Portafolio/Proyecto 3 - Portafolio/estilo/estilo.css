@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*==========================================*/
+/*      NAV BAR     */
+/*==========================================*/
+
+
+
+#navbar{
+    position: fixed;
+    top: 0;
+    background-color: red;
+}
+
+#welcome-section{
+    background-color: black;
+    height: 100vh;
+}
+
+
+/*==========================================*/
+/*      MEDIA QUERY     */
+/*==========================================*/
+
+@media(max-width: 900px) {
+
+}
