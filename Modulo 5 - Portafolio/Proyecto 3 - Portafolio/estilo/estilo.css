@@ -4,6 +4,25 @@
     padding: 0;
 }
 
+:root{
+    --altura-header: 3rem;
+}
+
+/*==========================================*/
+/*      BODY     */
+/*==========================================*/
+body{
+    margin-top: var(--altura-header);
+}
+
+
+
+/*==========================================*/
+/*  FIN      BODY     */
+/*==========================================*/
+
+
+
 /*==========================================*/
 /*      NAV BAR     */
 /*==========================================*/
@@ -14,11 +33,36 @@
     position: fixed;
     top: 0;
     background-color: red;
+    height: var(--altura-header);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
 }
+
+nav a{
+    color: white;
+    margin: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+/*==========================================*/
+/*  FIN      NAV BAR     */
+/*==========================================*/
+
+
 
 #welcome-section{
     background-color: black;
     height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
