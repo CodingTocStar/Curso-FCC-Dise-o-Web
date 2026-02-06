@@ -1,0 +1,220 @@
+/* ============================= */
+/*        VARIABLES              */
+/* ============================= */
+
+:root {
+    --altura-header: 3rem;
+
+    /* Colores base */
+    --color-fondo-principal: #000;
+    --color-fondo-secundario: #1f2933;
+    --color-fondo-cards: #303841;
+    --color-primario: #be3144;
+    --color-texto-principal: #ffffff;
+    --color-texto-secundario: #cbd5e1;
+
+    /* Tipografía */
+    --fs-h1-mobile: 2.2rem;
+    --fs-h1-desktop: 4rem;
+    --fs-h2: 2rem;
+    --fs-texto: 1rem;
+}
+
+/* ============================= */
+/*        RESET                  */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================= */
+/*        GENERALES              */
+/* ============================= */
+
+body {
+    margin-top: var(--altura-header);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+}
+
+/* ============================= */
+/*        NAVBAR                 */
+/* ============================= */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--altura-header);
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#navbar a {
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 0.6rem;
+}
+
+/* ============================= */
+/*        WELCOME                */
+/* ============================= */
+
+#welcome-section {
+    height: 100vh;
+    background-color: var(--color-fondo-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+#welcome-section h1 {
+    font-size: var(--fs-h1-mobile);
+    line-height: 1.2;
+}
+
+#welcome-section h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-primario);
+}
+
+/* ============================= */
+/*        PROJECTS               */
+/* ============================= */
+
+#projects {
+    background-color: var(--color-fondo-secundario);
+    padding: 3rem 1rem;
+}
+
+.projects-header {
+    text-align: center;
+    font-size: var(--fs-h2);
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.project-tile {
+    background-color: var(--color-fondo-cards);
+    width: 100%;
+    max-width: 360px;
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+    transform: translateY(-8px);
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-title {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* ============================= */
+/*        CONTACTO               */
+/* ============================= */
+
+#contacto {
+    background-color: var(--color-fondo-principal);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+}
+
+.contact-header p {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--color-primario);
+}
+
+#contact-links {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+#contact-links a:hover {
+    transform: translateY(-6px);
+}
+
+#contact-links i {
+    font-size: 1.6rem;
+}
+
+/* ============================= */
+/*        DESKTOP                */
+/* ============================= */
+
+@media (min-width: 900px) {
+
+    #navbar {
+        justify-content: flex-end;
+        padding-right: 1rem;
+    }
+
+    #navbar a {
+        font-size: 1.4rem;
+        margin: 0 1rem;
+    }
+
+    #welcome-section h1 {
+        font-size: var(--fs-h1-desktop);
+    }
+
+    .projects-grid {
+        gap: 3rem;
+    }
+
+    #contact-links {
+        flex-direction: row;
+    }
+}
