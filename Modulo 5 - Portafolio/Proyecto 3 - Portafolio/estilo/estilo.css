@@ -6,7 +6,7 @@
 
 :root {
     --altura-header: 3rem;
-
+    --tamano-titulos: 3rem;
     --color-primario: #be3144;
     /* acento / hovers */
     --color-fondo-oscuro: #000000;
@@ -24,8 +24,14 @@
 /*==========================================*/
 /*      ETIQUETAS     */
 /*==========================================*/
+
+html {
+    /* (Opcional) Esto hace que el scroll sea suave al hacer clic */
+    scroll-behavior: smooth;
+}
+
 body {
-    margin-top: var(--altura-header);
+    /* margin-top: var(--altura-header); */
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -34,6 +40,11 @@ h1 {
     line-height: 1.4;
     font-weight: 700;
     text-align: center;
+}
+
+section {
+    /* Esto hace que al scrollear a una sección, respete el espacio del menú */
+    scroll-margin-top: var(--altura-header);
 }
 
 
@@ -58,13 +69,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: end;
-
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #navbar a {
     color: var(--color-texto-principal);
     margin: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
     position: relative;
@@ -100,7 +112,7 @@ h1 {
 #welcome-section {
     background-color: var(--color-fondo-oscuro);
     color: var(--color-texto-principal);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +120,7 @@ h1 {
 }
 
 #welcome-section h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 300;
     margin-top: 2rem;
     font-style: italic;
@@ -130,7 +142,7 @@ h1 {
 }
 
 .projects-header {
-    font-size: 2.5rem;
+    font-size: var(--tamano-titulos);
     font-weight: 700;
     color: var(--color-texto-principal);
     margin-bottom: 2rem;
@@ -149,9 +161,15 @@ h1 {
     background-color: var(--color-primario);
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.8s ease;
+    transition: transform 0.6s ease;
 }
 
+/* probando codex */
+.projects-header.is-visible::after {
+    transform: scaleX(1);
+}
+
+/*  */
 .projects-header:hover::after {
     transform: scaleX(1);
 }
@@ -198,6 +216,8 @@ h1 {
     background-color: var(--color-fondo-card);
     padding: 1.2rem;
     font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-align: center;
     transition: color 0.3s ease;
 }
@@ -216,12 +236,12 @@ h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 80vh;
-
+    align-items: center;
+    height: 50vh;
 }
 
 .contact-header h2 {
-    font-size: 3rem;
+    font-size: var(--tamano-titulos);
     font-weight: 700;
     margin-top: 2rem;
 
@@ -229,7 +249,7 @@ h1 {
 
 .contact-header p {
     color: var(--color-primario);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 300;
     margin-top: 1rem;
     font-style: italic;
@@ -271,5 +291,37 @@ h1 {
 /*==========================================*/
 /*      MEDIA QUERY     */
 /*==========================================*/
+@media(max-width: 900px) {
+    h1 {
+        font-size: 2.5rem;
+    }
 
-@media(max-width: 900px) {}
+    #welcome-section h3 {
+        font-size: 1.2rem;
+    }
+
+    #navbar {
+        justify-content: center;
+    }
+
+    #navbar a {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0.5rem;
+    }
+
+    .projects-header,
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+
+    #contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
